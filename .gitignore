@@ -1,0 +1,47 @@
+# Local source material, development tools and QA (not needed by the static site).
+/content/
+/scripts/
+/tests/
+/docs/
+/README.md
+
+# Artwork originals and export manifests. Keep the responsive WebP files deployed.
+/assets/era-scenes/new/
+/assets/era-scenes/masters/
+/assets/era-scenes/manifest.json
+/assets/era-scenes/timeline/manifest.json
+
+# Retained research downloads; active lesson images remain included.
+/assets/images/origins/chance-liber-de-ludo-aleae.pdf
+/assets/images/origins/chance-liber-de-ludo-aleae.png
+/assets/images/origins/rates-muqaddimah-manuscript.jpg
+
+# Local environments, dependencies and caches.
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+coverage/
+playwright-report/
+test-results/
+
+# Local editor settings, credentials and machine-specific files.
+/.vscode/
+/.idea/
+/.codex/
+/.agents/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# HTML, runtime JS/CSS, compiled lessons, responsive images, image credits and
+# deployment configuration intentionally remain eligible for version control.

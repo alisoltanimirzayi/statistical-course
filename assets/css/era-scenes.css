@@ -1,0 +1,25 @@
+/* Shared artwork treatment. All source credits remain with authentic lesson assets. */
+.scene-media{display:block;overflow:hidden}
+.scene-media img{display:block;width:100%;height:100%;object-fit:cover}
+.era-passage{position:relative;isolation:isolate;min-height:370px;display:flex;align-items:end;overflow:hidden;background:#233237;color:#fff}
+.era-passage>.scene-media,.era-passage__shade{position:absolute;inset:0;z-index:-1}
+.era-passage .scene-media img{object-position:50% 43%}
+.era-passage__shade{background:linear-gradient(90deg,#122126ed,#122126a6 45%,#12212612 80%),linear-gradient(0deg,#12212690,transparent 65%)}
+html[dir=rtl] .era-passage__shade{background:linear-gradient(270deg,#122126ed,#122126a6 45%,#12212612 80%),linear-gradient(0deg,#12212690,transparent 65%)}
+.era-passage__copy{padding:44px 48px;width:min(70%,760px)}
+.era-passage__meta{display:flex;flex-wrap:wrap;align-items:center;gap:18px;font:500 11px/1.8 var(--sans);letter-spacing:.1em;color:#eee7da}
+.era-passage__meta bdi{letter-spacing:.02em;border-inline-start:1px solid #ffffff5c;padding-inline-start:18px}
+.era-passage h3{font:400 clamp(40px,4.6vw,67px)/1.06 var(--serif);letter-spacing:-.025em;color:#fff;margin:22px 0 20px}
+.era-passage__count{font:500 11px/1.8 var(--sans);color:#f2dfc8}
+.era-passage__meta,.era-passage__count{color:#fff}
+.era-passage__number{position:absolute;inset-inline-end:34px;bottom:24px;font:400 100px/.9 var(--serif);color:#fff4;letter-spacing:-.07em}
+#enlightenment .era-passage .scene-media img{object-position:50% 85%}
+#computational .era-passage .scene-media img{object-position:65% 65%}
+.lesson-cover{position:absolute;inset-block:42px;inset-inline-end:5%;width:36%;margin:0;background:#e7e0d3;border:1px solid #d5cdbf;overflow:hidden}
+.lesson-cover .scene-media{position:absolute;inset:0}
+.lesson-cover .scene-media img{object-position:50% 43%}
+.lesson-cover figcaption{position:absolute;bottom:0;inset-inline:0;background:linear-gradient(0deg,#14242af5,#14242a94);padding:24px 20px 15px;color:#fff;font:11px/1.85 var(--sans)}
+html[lang=fa] .era-passage h3{font-size:clamp(30px,3.8vw,48px);line-height:1.55;letter-spacing:0}
+html[lang=fa] .era-passage__meta{letter-spacing:0}
+@media(max-width:900px){.era-passage{min-height:350px}.era-passage__copy{width:80%;padding:34px}.lesson-cover{position:relative;inset:auto;width:100%;aspect-ratio:16/9;margin:24px 0 30px}.lesson-cover .scene-media img{object-position:50% 42%}}
+@media(max-width:620px){.era-passage{min-height:510px}.era-passage .scene-media img{object-position:50% 37%}.era-passage__copy{width:100%;padding:28px}.era-passage h3{font-size:42px;max-width:85%}.era-passage__number{font-size:76px;inset-inline-end:24px;bottom:24px}.era-passage__shade,html[dir=rtl] .era-passage__shade{background:linear-gradient(0deg,#122126fa,#122126ba 35%,#12212600 72%)}.era-passage__meta{gap:12px;font-size:10px}.era-passage__meta bdi{padding-inline-start:12px}.lesson-cover{aspect-ratio:5/4}.lesson-cover .scene-media img{object-position:50% 39%}html[lang=fa] .era-passage h3{font-size:32px;line-height:1.6}}
