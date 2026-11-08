@@ -3,7 +3,6 @@
 /scripts/
 /tests/
 /docs/
-/README.md
 
 # Artwork originals and export manifests. Keep the responsive WebP files deployed.
 /assets/era-scenes/new/
