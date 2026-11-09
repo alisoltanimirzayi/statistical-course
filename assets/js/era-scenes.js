@@ -5,8 +5,8 @@
  const fa=()=>document.documentElement.lang==='fa';
  const escape=text=>String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const copy={
-  en:{note:'This project was created using artificial intelligence.',timeline:'Explore the atlas',guided:'A GUIDED BEGINNING',pathTitle:'Three questions. A foundation.',pathIntro:'Begin with the lessons, or follow your curiosity through the atlas.',step1tag:'DEFINE',step1:'Who belongs in the count?',step2tag:'COMPARE',step2:'What makes a comparison fair?',step3tag:'REASON',step3:'How can we think about chance?',ideas:'ideas in this era',chapter:'ERA',contents:'In this lesson',progress:'Reading progress',continue:'Continue reading',setting:'Historical setting'},
-  fa:{note:'این پروژه با استفاده از هوش مصنوعی ساخته شده است.',timeline:'کاوش در اطلس',guided:'آغازی با راهنما',pathTitle:'سه پرسش؛ یک بنیان.',pathIntro:'از درس‌ها آغاز کنید، یا با کنجکاوی خود در اطلس پیش بروید.',step1tag:'تعریف',step1:'چه کسانی در شمارش جای می‌گیرند؟',step2tag:'مقایسه',step2:'چه چیزی مقایسه را منصفانه می‌کند؟',step3tag:'استدلال',step3:'چگونه دربارهٔ احتمال بیندیشیم؟',ideas:'ایده در این دوره',chapter:'دوره',contents:'در این درس',progress:'پیشرفت مطالعه',continue:'ادامهٔ مطالعه',setting:'فضای تاریخی'}
+  en:{note:'This project was created using artificial intelligence.',timeline:'Explore the atlas',ideas:'ideas in this era',chapter:'ERA',contents:'In this lesson',progress:'Reading progress',setting:'Historical setting'},
+  fa:{note:'این پروژه با استفاده از هوش مصنوعی ساخته شده است.',timeline:'کاوش در اطلس',ideas:'ایده در این دوره',chapter:'دوره',contents:'در این درس',progress:'پیشرفت مطالعه',setting:'فضای تاریخی'}
  };
  const t=()=>copy[fa()?'fa':'en'];
  const number=n=>n.toLocaleString(fa()?'fa-IR':'en-US',{minimumIntegerDigits:2});
@@ -45,7 +45,6 @@
    tools.addEventListener('click',event=>{const button=event.target.closest('[data-reading-section]');if(!button)return;const heading=headings[Number(button.dataset.readingSection)];tools.querySelector('details').open=false;heading.tabIndex=-1;heading.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth',block:'start'});heading.focus({preventScroll:true});});
    root.querySelector('.lesson-body')?.before(tools);
   }
-  try{localStorage.setItem('statisticsConnectedLastLesson',id);}catch(e){}
   updateProgress();
  }
  function updateProgress(){
@@ -56,7 +55,6 @@
  function localize(){
   const c=t();document.querySelectorAll('.project-note').forEach(el=>el.textContent=c.note);
   document.querySelectorAll('[data-copy]').forEach(el=>{if(c[el.dataset.copy])el.textContent=c[el.dataset.copy];});
-  const resume=document.getElementById('continueReading');if(resume){let id;try{id=localStorage.getItem('statisticsConnectedLastLesson');}catch(e){}if(id&&lessonMapping[id]){resume.hidden=false;resume.href='lessons.html#topic/'+id;resume.textContent=c.continue+' '+(fa()?'←':'→');}}
  }
  const root=document.getElementById('lesson');
  document.getElementById('lessonLangSwitch')?.addEventListener('click',()=>{

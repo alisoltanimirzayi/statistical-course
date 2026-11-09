@@ -37,3 +37,4 @@ html[lang=fa] .timeline .card-title{font-size:26px;line-height:1.8}
 .timeline .era-passage--immersive .era-passage__count{display:inline-block;padding:5px 9px;background:#0b171ddd;border:1px solid #ffffff26;border-radius:3px;backdrop-filter:blur(6px)}
 .timeline .era-passage--immersive .era-passage__shade{background:linear-gradient(90deg,#09151ae6,#09151ac4 62%,#09151a1a),linear-gradient(0deg,#09151a69,transparent 85%)}
 html[dir=rtl] .timeline .era-passage--immersive .era-passage__shade{background:linear-gradient(270deg,#09151ae6,#09151ac4 62%,#09151a1a),linear-gradient(0deg,#09151a69,transparent 85%)}
+#timeline{max-width:1120px;margin-inline:auto;width:100%}
